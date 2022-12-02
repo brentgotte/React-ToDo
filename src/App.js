@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Todo from './components/Todo';
+// import Delmsg from './components/Delmsg';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>My toDo's</h1>
+      {/* <Delmsg/> */}
+      <Todo text='learn react'/>
+      <Todo text='master react'/>
+      <Todo text='master react again'/>
+      <Todo text="paashaas"/>
+
+
+
     </div>
   );
-}
+};
 
 export default App;
