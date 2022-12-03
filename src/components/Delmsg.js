@@ -1,11 +1,20 @@
 function Delmsg(props) {
+    function cancelHandler() {
+        props.onCancel();
+    } 
+    function confirmHandler() {
+        props.onConfirm();
+    }
+
     return (
-        <div>
+        <div className="Delmsg" onClick={props.onCancel}>
+        
             <p> Are you sure?</p>
             
-            <button>Cancel</button>
-            <button>Confirm</button>
+            <button onClick={cancelHandler}>Cancel</button>
+            <button onClick={confirmHandler}>Confirm</button>
         </div>
+         
     );
 
 }

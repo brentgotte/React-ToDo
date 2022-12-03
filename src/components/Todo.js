@@ -1,12 +1,15 @@
-// import Delmsg from './Delmsg';
+import Delmsg from './Delmsg';
+import {useState} from 'react';
 function Todo(props) {
+  const [modalIsOpen, setModelIsOpen] = useState(false);
 
     function Deletehandler() {
-
-       alert('clicked');
-
-        
+      setModelIsOpen(true);
     };
+    function closeModal() {
+      setModelIsOpen(false);
+    }
+    
     return (
         <div>
             <div className="card">
@@ -15,6 +18,7 @@ function Todo(props) {
     <div className="button">
       <button onClick={Deletehandler}>Delete</button>
     </div>
+    {modalIsOpen ? <Delmsg onCancel={closeModal} onConfirm={closeModal}/> : null}
     </div>
         
         
